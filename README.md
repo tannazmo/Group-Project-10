@@ -30,6 +30,6 @@ The question to answer is the likelihood of getting hospitalised or dying if exp
 * Python files to run on Google Colab will be using Pandas and PySpark libraries.
 * The cleaned data will be loaded in a PostgreSQL on AWS.
 * Data will be processed with a superised machine learning model potentially Neural Networks.
-* Presentation Slides on Google Slides 
+* Presentation Slides on Google Slides.
 * For visualisation, we will have an interactive Tableau dashboard.
 
