@@ -22,7 +22,14 @@ It is important to mention that our datasource is limited to the reported cases.
 #### Questions they hope to answer with the data
 The question to answer is the likelihood of getting hospitalised or dying if experiencing any side effects by taking this medication. Using a supervised machine learning classificaion method, we want to be able to predict, -by looking at the age, gender, adverse reactions, drug indication- whether the patient will have serious reactions to Atorvastatin leading to  hospitalisation or not and whether they will have very serious reactions that may cause death or not. 
 
+
+#### Database Mock Up (Preferably a ERD - Entity Relationship Diagram)
+![ERD](ERD.png "ERD")
+
+#### Diagram of Data Pipeline (ETL, Database, and Machine Learning model)
+![Data Pipeline](data_pipeline.png "Data Pipeline")
 ![Machine_Learning_model](Resources/Model.png "Machine Learning Model diagram")
+
 
 
 #### Technologies, languages, tools, and algorithms used throughout the project
@@ -30,6 +37,7 @@ The question to answer is the likelihood of getting hospitalised or dying if exp
 * Python files to run on Google Colab will be using Pandas and PySpark libraries.
 * The cleaned data will be loaded in a PostgreSQL on AWS.
 * Data will be processed with a superised machine learning model potentially Neural Networks.
-* Presentation Slides on Google Slides 
+* Presentation Slides on Google Slides.
 * For visualisation, we will have an interactive Tableau dashboard.
+
 
