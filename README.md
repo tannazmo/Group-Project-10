@@ -1,4 +1,4 @@
-# Group Project 10 - Analysis of adverse reaction of FDA Approved medicine ATORVASTATIN
+# Analysis of adverse reaction of FDA Approved medicine ATORVASTATIN
 
 ## Presentation
 
