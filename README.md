@@ -92,7 +92,8 @@ This is a visualization about statins in general:
 ![Tables_Database](Resources/database_2.png "Tables of the Database")
 
 
-
+### Link to our code:
+[Code] (https://colab.research.google.com/drive/1CaJ-I_ONyDSxb8On3Welxf6lNdEUFOWq?usp=sharing)
 
 ### Link to the Google Slide Presentation:
 [Presentation] (https://docs.google.com/presentation/d/1gpLId618DzodGrncwFsHKa1xZkDsZFZXl6Yh6Q-xEaQ/edit#slide=id.p1)
