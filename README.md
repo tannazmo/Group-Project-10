@@ -1,4 +1,4 @@
-# Analysis of adverse reaction of FDA Approved medicine ATORVASTATIN
+# Analysis of adverse reaction of FDA Approved medicine STATINS
 
 ## Presentation
 
@@ -33,11 +33,17 @@ The question to answer is the likelihood of getting hospitalised or dying if exp
 #### Description of the data exploration phase of the project
 
 While exploring the data, we realized that some of the fields have many missing values, such as patient's weight, some of the fields' categorical data have about 500 different unique values, and some are obviously have input mistakes. If we wanted to drop all the missing values blindly, we would have been left with a relatively small dataset to work with and not enough data to be able to train our machine learning models and hope to get a higher performance model able to make predictions with the desired level of accuracy.
+
 To fix the missing numerical values issue, we decided to use some of the existing methods to fill some of the missing values, in this case we used Iterative Imputing, that uses a function to predict the missing values based on the existing values and other features.
+
 The approach we took for the categorical data with numerous unique values, was to group them depending on their values. with this approach we were able to bring down the number of unique values to about 16 categories and then encode them into numerical features using (oneHotEncoder)
+
 The fields were data had obvious input mistake, we corrected the issue with pandas replace method.
 
-Taking advantage of these methods helped us save a healthy percentage of our original dataset, while giving us confidence that we stayed ***honest with the original dataset.
+Taking advantage of these methods helped us save a healthy percentage of our original dataset, while giving us confidence that we stayed true to the original dataset.
+
+
+(CODE SNIPPETTs)
 
 #### Description of the analysis phase of the project
 
@@ -45,14 +51,18 @@ After the preprocessing of our data, we decided on our features and targets for 
 
 This task was split between all the team members and each of us worked on different ML models, comprising of the less complex models such as Logistic Regression model and more complex ones such as Neural Network's deep learning models.
 
-After extracting a classification report and accuracy score for each of our models, we realized that the model that is giving us the best results for predicting death and hospitalisation (taking into account precision and recall and other metrics) is Random Forest with Balanced subsample! (different from BalancedRandomForestClassifier?!)
+After extracting a classification report and accuracy score for each of our models, we realized that the model that is giving us the best results for predicting death and hospitalisation (taking into account precision and recall and other metrics) is Random Forest with Balanced subsample.
 
 The results of some of the models we tried are here:
 
-Logistic Regression (image)
-Random Forest Balanced (image)
-SVM (image)
-NN (image)
+- Logistic Regression 
+![Logistic_Regression](Resources/images/logreg.png "Logistic Regression")
+- Random Forest Balanced
+![Random_Forest_Balanced](Resources/images/rfb.png "Random Forest Balanced Subsample")
+- SVM
+![Support_Vector](Resources/images/svm.png "Support Vector Model")
+- Neural Network 
+![Neural_Network](Resources/images/nn.png "Neural Network")
 
 
 
@@ -64,4 +74,25 @@ NN (image)
 * Presentation Slides on Google Slides.
 * For visualisation, we will have an interactive Tableau dashboard.
 
+#### Visualization Blueprint
+This is a visualization about statins in general:
 
+![Number_of_Records](Resources/images/Total number of records.png "Number of Records")
+
+![Death_Gender](Resources/images/Drug death risk based on Gender.png "Death Risk by Gender")
+
+![Age](Resources/images/Age.png "Adverse Reaction by Age")
+
+![Geographical_Death](Resources/images/Country with the highest death_Medicine.png "Geographical Death")
+
+#### Database Connection
+
+![Creating_Database](Resources/database_1.png "Creating Database")
+
+![Tables_Database](Resources/database_2.png "Tables of the Database")
+
+
+
+
+### Link to the Google Slide Presentation:
+[Presentation] (https://docs.google.com/presentation/d/1gpLId618DzodGrncwFsHKa1xZkDsZFZXl6Yh6Q-xEaQ/edit#slide=id.p1)
