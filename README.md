@@ -77,13 +77,13 @@ The results of some of the models we tried are here:
 #### Visualization Blueprint
 This is a visualization about statins in general:
 
-![Number_of_Records](Resources/images/Total number of records.png "Number of Records")
+![Number_of_Records](Resources/images/Total%20number%20of%20records.png "Number of Records")
 
-![Death_Gender](Resources/images/Drug death risk based on Gender.png "Death Risk by Gender")
+![Death_Gender](Resources/images/Drug%20death%20risk%20based%20on%20Gender.png "Death Risk by Gender")
 
 ![Age](Resources/images/Age.png "Adverse Reaction by Age")
 
-![Geographical_Death](Resources/images/Country with the highest death_Medicine.png "Geographical Death")
+![Geographical_Death](Resources/images/Country%20with%20the%20highest%20death_Medicine.png "Geographical Death")
 
 #### Database Connection
 
