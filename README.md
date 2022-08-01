@@ -45,7 +45,6 @@ Taking advantage of these methods helped us save a healthy percentage of our ori
 Example of regrouping in order to decrease the number of categorical data (in this case countries):
 
 ```
-#
 ctydict = df['primarysourcecountry'].value_counts().to_dict()
 for c in ctydict:
   if ctydict[c] <= 300:
@@ -64,13 +63,20 @@ After extracting a classification report and accuracy score for each of our mode
 
 The results of some of the models we tried are here:
 
-- Logistic Regression 
+- Logistic Regression
+
 ![Logistic_Regression](Resources/images/logreg.png "Logistic Regression")
+
 - Random Forest Balanced
+
 ![Random_Forest_Balanced](Resources/images/rfb.png "Random Forest Balanced Subsample")
+
 - SVM
+
 ![Support_Vector](Resources/images/svm.png "Support Vector Model")
+
 - Neural Network 
+
 ![Neural_Network](Resources/images/nn.png "Neural Network")
 
 
@@ -102,7 +108,7 @@ This is a visualization about statins in general:
 
 
 ### Link to our code:
-[Code] (https://colab.research.google.com/drive/1OnK27kfFz05AUs3EIdkArZ_w93yHvBJA?usp=sharing "Code")
+[Code](https://colab.research.google.com/drive/1OnK27kfFz05AUs3EIdkArZ_w93yHvBJA?usp=sharing "Code")
 
 ### Link to the Google Slide Presentation:
-[Presentation] (https://docs.google.com/presentation/d/1gpLId618DzodGrncwFsHKa1xZkDsZFZXl6Yh6Q-xEaQ/edit#slide=id.p1 "Presentation Link")
+[Presentation](https://docs.google.com/presentation/d/1gpLId618DzodGrncwFsHKa1xZkDsZFZXl6Yh6Q-xEaQ/edit#slide=id.p1 "Presentation Link")
