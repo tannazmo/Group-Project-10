@@ -1,4 +1,4 @@
-# Analysis of adverse reaction of FDA Approved medicine STATINS
+# Analysis of adverse reaction of FDA Approved medicine class STATINS
 
 ## Presentation
 
@@ -7,7 +7,7 @@ This project will be a supervised machine learning of Classification type.
 ### Content
 
 #### Selected topic 
-Taking the most prescribed drug class, Statins,(Cholesterol lowering medications) leading to hospitatlization and death.
+Taking the most prescribed drug class, Statins (Cholesterol lowering medications), leading to hospitatlization and death.
 
 
 #### Reason why this topic was selected 
@@ -42,8 +42,17 @@ The fields were data had obvious input mistake, we corrected the issue with pand
 
 Taking advantage of these methods helped us save a healthy percentage of our original dataset, while giving us confidence that we stayed true to the original dataset.
 
+Example of regrouping in order to decrease the number of categorical data (in this case countries):
 
-(CODE SNIPPETTs)
+```
+#
+ctydict = df['primarysourcecountry'].value_counts().to_dict()
+for c in ctydict:
+  if ctydict[c] <= 300:
+    df['primarysourcecountry'] = df['primarysourcecountry'].replace(c,"Other")
+
+df['primarysourcecountry'].value_counts()
+```
 
 #### Description of the analysis phase of the project
 
@@ -93,7 +102,7 @@ This is a visualization about statins in general:
 
 
 ### Link to our code:
-[Code] (https://colab.research.google.com/drive/1CaJ-I_ONyDSxb8On3Welxf6lNdEUFOWq?usp=sharing)
+[Code] (https://colab.research.google.com/drive/1OnK27kfFz05AUs3EIdkArZ_w93yHvBJA?usp=sharing "Code")
 
 ### Link to the Google Slide Presentation:
-[Presentation] (https://docs.google.com/presentation/d/1gpLId618DzodGrncwFsHKa1xZkDsZFZXl6Yh6Q-xEaQ/edit#slide=id.p1)
+[Presentation] (https://docs.google.com/presentation/d/1gpLId618DzodGrncwFsHKa1xZkDsZFZXl6Yh6Q-xEaQ/edit#slide=id.p1 "Presentation Link")
