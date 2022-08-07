@@ -135,10 +135,17 @@ After cleaning the dataset, we have left 29439 reports with 36 variables:
 
 #### Database Implementation
 
+##### ERD Diagram
+
+<img src="https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/db_erd.png" width=60%>
+
 With the cleaned dataset, we created 4 dataframes: report, patient, reactions and drugs that contain the information we uploaded in 4 tables in a AWS PostgreSQL database.
 
+<img src="https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/database_1.png" width=50%>
 
-<img src="https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/db_erd.png" width=50%>
+Then, before starting our analyses and create our machine learning model, we downloaded each table and join them in a dataframe to be preprocessed.
+
+<img src="https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/database_2.png" width=50%>
 
 
 ![Machine_Learning_model](Resources/Model.png "Machine Learning Model diagram")
