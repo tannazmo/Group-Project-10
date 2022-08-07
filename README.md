@@ -31,7 +31,8 @@ We considered the following statins:
 This is a dataset provided by the FDA based upon submissions by medical professionals about medications and their effect (adverse effect) on those who take them.
 It is important to mention that our datasource is limited to the reported cases.
 
-The data collected by FDA is available through their API or CSV files. Using the API data, which has been streamlined to remove duplicate records, we created our dataset by downloading the reports. 
+The data collected by FDA is available through their API or CSV files. Using the API data, which has been streamlined to remove duplicate records, we created our dataset. 
+
 Example of API query used:
 
 [API URL](https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.generic_name:'atorvastatin'+patient.drug.openfda.brand_name:'atorvastatin'+patient.drug.medicinalproduct:'atorvastatin')+AND+_exists_:patient.drug.drugstructuredosageunit+AND+_exists_:patient.drug.drugstructuredosagenumb+AND+(primarysource.qualification:1+primarysource.qualification:2+primarysource.qualification:3))
