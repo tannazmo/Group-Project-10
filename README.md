@@ -2,7 +2,9 @@
 
 ## Presentation
 
-This project will be a supervised machine learning of Classification type. 
+Adverse drug events (ADEs) are defined as injuries resulting from medication use. Adverse reporting data have proven to be useful evidence in predicting adverse drug effects and flagging potential safety issues. 
+Taking one the most prescribed class of drugs, statins, we used FDA adverse reporting data to analyze their potential adverse reactions and predict the most undesirable ones!
+
 
 ### Content
 
