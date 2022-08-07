@@ -75,7 +75,6 @@ route: [
 ],
 }
 ```
-We were able to download 280,037 reports in 29 requests
 
 #### Questions the team hope to answer with the data
 * Questions we want to answer trough analysis and visualizations with Tableau:
@@ -88,7 +87,7 @@ We were able to download 280,037 reports in 29 requests
 
 
 #### Downloading and cleaning the data from OpenFDA
-For all the statins considered: Atorvastatin, Fluvastatin, Simvastatin, Pravastatin, and Rosuvastatin, we were able to download 280,037 records.
+For all the statins considered: Atorvastatin, Fluvastatin, Simvastatin, Pravastatin, and Rosuvastatin, we were able to download 280,037 records in 29 requests.
 
 Some additional cleaning was necessary to consolidate relevant data from the reports we obtained. Therefore, we went through the following steps to clean the data:
 
