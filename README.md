@@ -233,12 +233,12 @@ As rhabdomyolysis a more serious condition than myalgia, this could be a reason 
 
 
 #### Technologies, languages, tools, and algorithms used throughout the project
-* Data in the format of JSON retrieved from FDA Website using API, then converted to CSV, then stored to Amazon S3
-* Python files to run on Google Colab will be using Pandas and PySpark libraries.
-* The cleaned data will be loaded in a PostgreSQL on AWS.
-* Data will be processed with a superised machine learning model potentially Neural Networks.
+* Data in JSON format retrieved from FDA API, then converted to CSV, then stored to Amazon S3
+* Python files to run on Google Colab using Pandas and PySpark libraries.
+* The cleaned data was loaded in a PostgreSQL database on AWS.
+* The cleaned data was processed and used for prediction applying a superised machine learning model from scikit-learn python library.
 * Presentation Slides on Google Slides.
-* For visualisation, we will have an interactive Tableau dashboard.
+* For visualisation, we have an interactive Tableau dashboard.
 
 
 ### Link to our code:
