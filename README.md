@@ -28,7 +28,7 @@ We considered the following statins:
 * We wanted to work with a real-world dataset, and using this data set, we could ask and answer questions about an important issue that could be anyone's concern.
 
 #### Description of the source of data 
-This is a dataset provided by the FDA based upon submissions by medical professionals about medications and their effect (adverse effect) on those who take them.
+This is a dataset provided by the FDA based upon submissions by medical professionals about medications and their reactions (adverse reactions) on those who take them.
 It is important to mention that our datasource is limited to the reported cases.
 
 The data collected by FDA is available through their API or CSV files. Using the API data, which has been streamlined to remove duplicate records, we created our dataset. 
