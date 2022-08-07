@@ -101,12 +101,6 @@ for prediction and visualization, we cleaned the JSON results from the API to 52
 	* "nb_concomitant": the number of concomitant drugs the person was taking with the statin
 	* "nb_interacting": the number of interacting drugs the person was taking with the statin
 
-* We imputed missing values for variables also considered essential:
-	* Patient sex: mode imputation
-	* Patient weight: iterative imputation
-	* Dosage number: iterative imputation
-	* Patient age: iterative imputation
-
 * We replaced NAN values in columns where the default value should be 0 according to openFDA indication: 
 	* serious, 
 	* seriousnessother
