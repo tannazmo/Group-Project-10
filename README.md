@@ -125,7 +125,7 @@ created a list of 10 reactions to keep based on the most common and severe repor
 ![age_outliers](https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/age_outliers.png)
 
 
-After cleaning the dataset, we have left 28828 reports with 36 variables:
+After cleaning the dataset, we have left 29439 reports with 36 variables:
 
 ![cleaned_df_columns](https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/df_final_cols.png)
 
@@ -134,6 +134,9 @@ After cleaning the dataset, we have left 28828 reports with 36 variables:
 ![Data Pipeline](https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/data_pipeline.png)
 
 #### Database Implementation
+
+With the cleaned dataset, we created 4 dataframes: report, patient, reactions and drugs that contain the information we uploaded in 4 tables in a AWS PostgreSQL database.
+
 
 <img src="https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/db_erd.png" width=50%>
 
