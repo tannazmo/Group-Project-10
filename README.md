@@ -196,15 +196,6 @@ The results of some of the models we tried are here:
 ![Neural_Network](Resources/images/nn.png "Neural Network")
 
 
-
-#### Technologies, languages, tools, and algorithms used throughout the project
-* Data in the format of JSON retrieved from FDA Website using API, then converted to CSV, then stored to Amazon S3
-* Python files to run on Google Colab will be using Pandas and PySpark libraries.
-* The cleaned data will be loaded in a PostgreSQL on AWS.
-* Data will be processed with a superised machine learning model potentially Neural Networks.
-* Presentation Slides on Google Slides.
-* For visualisation, we will have an interactive Tableau dashboard.
-
 #### Visualization 
 
 To answer the questions of our analyses rergarding statins, we used visual elements like charts, graphs, and maps we to find trends, outliers, and patterns in our dataset.
@@ -222,9 +213,13 @@ To answer the questions of our analyses rergarding statins, we used visual eleme
 <img src="https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/statins_reactions.png" width=80%>
 
 
-##### Statins and country
-
-<img src="https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/Country%20with%20the%20highest%20death_Medicine.png" width=80%>
+#### Technologies, languages, tools, and algorithms used throughout the project
+* Data in the format of JSON retrieved from FDA Website using API, then converted to CSV, then stored to Amazon S3
+* Python files to run on Google Colab will be using Pandas and PySpark libraries.
+* The cleaned data will be loaded in a PostgreSQL on AWS.
+* Data will be processed with a superised machine learning model potentially Neural Networks.
+* Presentation Slides on Google Slides.
+* For visualisation, we will have an interactive Tableau dashboard.
 
 
 ### Link to our code:
