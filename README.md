@@ -91,8 +91,7 @@ For all the statins considered: Atorvastatin, Fluvastatin, Simvastatin, Pravasta
 
 Some additional cleaning was necessary to consolidate relevant data from the reports we obtained. Therefore, we went through the following steps to clean the data:
 
-* As a report can have up to 100 fields, and many of them contain non-essential information for our analyses, before preprocessing the data 
-for prediction and visualization, we cleaned the JSON results from the API to remove 52 fields and their values.
+* Before preparing the data for prediction and visualization, we cleaned the JSON results from the API, removing 52 fields and their values as many contain non-essential information for our analyses. 
 
 * We drop all reports that do not have a statin as the suspected drugs of the reactions experienced.
 
