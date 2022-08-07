@@ -1,4 +1,4 @@
-<img src="https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/banner.png" width="800">
+<img src="https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/banner.png" width=100%>
 
 ## Presentation
 
