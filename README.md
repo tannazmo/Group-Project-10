@@ -251,8 +251,6 @@ As rhabdomyolysis a more serious condition than myalgia, this could be a reason 
 * This could help to inform the decision making process when prescribing statins and could potentially reduce instances of negative outcomes from adverse reactions.
 
 
-##### Further Data Discovery and Deployment of ML Model
-
 ### Link to our code:
 [Code](https://colab.research.google.com/drive/1OnK27kfFz05AUs3EIdkArZ_w93yHvBJA?usp=sharing "Code")
 
