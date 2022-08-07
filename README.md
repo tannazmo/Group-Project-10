@@ -84,10 +84,52 @@ route: [
 	* What reactions are most associated with death and hospitalization
 	
 * Question we want to answer using Using a supervised machine learning classificaion method:
-	* Likelihood of getting hospitalised or dying if experiencing any adverse reactions by taking this medicationt by looking at the age, gender, adverse reactions, drug indication- whether the patient will have serious reactions to Atorvastatin leading to  hospitalisation or not and whether they will have very serious reactions that may cause death or not. 
+	* Likelihood of getting hospitalised or dying if experiencing some adverse reactions by looking at the age, gender, adverse reactions, drug indication.
 
 
-#### Database Mock Up (Preferably a ERD - Entity Relationship Diagram)
+#### Download and cleaning the data from OpenFDA
+For all the statins considered: Atorvastatin, Fluvastatin, Simvastatin, Pravastatin, and Rosuvastatin, we were able to download 280,037 records.
+
+Some additional cleaning was necessary to consolidate relevant data from the reports we obtained. Therefore, we went through the following steps to clean the data:
+
+* As a report can have up to 100 fields, and many of them contain non-essential information for our analyses, before preprocessing the data 
+for prediction and visualization, we cleaned the JSON results from the API to 52 fields and their values.
+
+* We drop all reports that do not have a statin as the suspected drugs of the reactions experienced.
+
+* We collected the information from some variables to create two new features considered essential for predicting death and hospitalization: 
+	* "nb_concomitant": the number of concomitant drugs the person was taking with the statin
+	* "nb_interacting": the number of interacting drugs the person was taking with the statin
+
+* We imputed missing values for variables also considered essential:
+	* Patient sex: mode imputation
+	* Patient weight: iterative imputation
+	* Dosage number: iterative imputation
+	* Patient age: iterative imputation
+
+* We replaced NAN values in columns where the default value should be 0 according to openFDA indication: 
+	* serious, 
+	* seriousnessother
+	* seriousnessdisabling
+	* seriousnessdeath 
+	* seriousnesslifethreatening
+	* seriousnesscongenitalanomali 
+
+* As a report can have several reactions ranging from 1 to 35, and some of them can only appear in a single report, we investigated 
+created a list of 10 reactions to keep based on the most common and severe reported reactions.
+
+![final_reactions]()
+
+* We make sure that some variables such as age and weight does not contain outliers
+
+![age_outliers]()
+
+
+After cleaning the dataset, we have left 28828 reports with 36 variables:
+
+![cleaned_df_columns]()
+
+#### Database ERD
 ![ERD](ERD.png "ERD")
 
 #### Diagram of Data Pipeline (ETL, Database, and Machine Learning model)
