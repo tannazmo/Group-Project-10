@@ -31,7 +31,7 @@ We considered the following statins:
 This is a dataset provided by the FDA based upon submissions by medical professionals about medications and their effect (adverse effect) on those who take them.
 It is important to mention that our datasource is limited to the reported cases.
 
-The data collected by FDA is available through their API or CSV files. As the API data went through a harmonization process that removed duplicate records, we downloaded the reports from the API for our dataset.
+The data collected by FDA is available through their API or CSV files. As the API data went through a harmonization process that removed duplicate records, we downloaded the reports from the API to create our dataset.
 
 Example of API query used:
 
@@ -78,7 +78,13 @@ route: [
 
 
 #### Questions the team hope to answer with the data
-The question to answer is the likelihood of getting hospitalised or dying if experiencing any side effects by taking this medication. Using a supervised machine learning classificaion method, we want to be able to predict, -by looking at the age, gender, adverse reactions, drug indication- whether the patient will have serious reactions to Atorvastatin leading to  hospitalisation or not and whether they will have very serious reactions that may cause death or not. 
+* Questions we want to answer trough analysis and visualization with Tableau:
+	* What are the most common and severe reactions of Statins
+	* Is there a difference in developping adverse reactions among genders
+	* What reactions are most associated with death and hospitalization
+	
+* Question we want to answer using Using a supervised machine learning classificaion method:
+	* Likelihood of getting hospitalised or dying if experiencing any adverse reactions by taking this medicationt by looking at the age, gender, adverse reactions, drug indication- whether the patient will have serious reactions to Atorvastatin leading to  hospitalisation or not and whether they will have very serious reactions that may cause death or not. 
 
 
 #### Database Mock Up (Preferably a ERD - Entity Relationship Diagram)
