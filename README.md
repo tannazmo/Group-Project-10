@@ -135,7 +135,7 @@ After cleaning the dataset, we have left 28828 reports with 36 variables:
 
 #### Database Implementation
 
-![ERD](https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/db_erd.png)
+<img src="https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/db_erd.png" width=50%>
 
 
 ![Machine_Learning_model](Resources/Model.png "Machine Learning Model diagram")
