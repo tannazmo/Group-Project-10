@@ -205,22 +205,26 @@ The results of some of the models we tried are here:
 * Presentation Slides on Google Slides.
 * For visualisation, we will have an interactive Tableau dashboard.
 
-#### Visualization Blueprint
-This is a visualization about statins in general:
+#### Visualization 
 
-![Number_of_Records](Resources/images/Total%20number%20of%20records.png "Number of Records")
+To answer the questions of our analyses rergarding statins, we used visual elements like charts, graphs, and maps we to find trends, outliers, and patterns in our dataset.
 
-![Death_Gender](Resources/images/Drug%20death%20risk%20based%20on%20Gender.png "Death Risk by Gender")
+##### Statins and age
 
-![Age](Resources/images/Age.png "Adverse Reaction by Age")
+<img src="https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/statings_age.png" width=80%>
 
-![Geographical_Death](Resources/images/Country%20with%20the%20highest%20death_Medicine.png "Geographical Death")
+##### Statins and weight
 
-#### Database Connection
+<img src="https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/statins_weight.png" width=80%>
 
-![Creating_Database](Resources/database_1.png "Creating Database")
+##### Statins most common reactions
 
-![Tables_Database](Resources/database_2.png "Tables of the Database")
+<img src="https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/statins_reactions.png" width=80%>
+
+
+##### Statins and country
+
+<img src="https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/Country%20with%20the%20highest%20death_Medicine.png" width=80%>
 
 
 ### Link to our code:
