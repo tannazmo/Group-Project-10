@@ -139,7 +139,7 @@ With the cleaned dataset, we created 4 dataframes: report, patient, reactions an
 
 Then, before starting our analyses and create our machine learning model, we downloaded each table and join them in a dataframe to be preprocessed.
 
-<img src="https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/database_2.png" width=90%>
+<img src="https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/database_2.png" width=100%>
 
 
 #### Description of the data exploration phase of the project
