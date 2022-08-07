@@ -1,4 +1,4 @@
-![banner]()
+![banner](https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/banner.png)
 
 ## Presentation
 
