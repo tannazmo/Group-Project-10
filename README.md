@@ -9,7 +9,15 @@ Taking one the most prescribed class of drugs, statins, we used FDA adverse repo
 ### Content
 
 #### Selected topic 
-Taking the most prescribed drug class, Statins (Cholesterol lowering medications), leading to hospitatlization and death.
+The most prescribed drug class, Statins (Cholesterol lowering medications), leading to hospitatlization and death.
+
+We considered the following statins:
+
+* Atorvastatin (Lipitor®)
+* Fluvastatin (Lescol. ®)
+* Pravastatin (Pravachol®)
+* Rosuvastatin (Crestor®)
+* Simvastatin (Zocor®)
 
 
 #### Reason why this topic was selected 
