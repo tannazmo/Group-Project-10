@@ -129,12 +129,17 @@ After cleaning the dataset, we have left 28828 reports with 36 variables:
 
 ![cleaned_df_columns](https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/df_final_cols.png)
 
-#### Database ERD
-![ERD](ERD.png "ERD")
+#### Data Pipeline
 
-#### Diagram of Data Pipeline (ETL, Database, and Machine Learning model)
-![Data Pipeline](data_pipeline.png "Data Pipeline")
+![Data Pipeline](https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/data_pipeline.png)
+
+#### Database Implementation
+
+![ERD](https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/db_erd.png)
+
+
 ![Machine_Learning_model](Resources/Model.png "Machine Learning Model diagram")
+
 
 #### Description of the data exploration phase of the project
 
