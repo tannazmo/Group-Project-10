@@ -135,14 +135,11 @@ After cleaning the dataset, we have left 29439 reports with 36 variables:
 
 With the cleaned dataset, we created 4 dataframes: report, patient, reactions and drugs that contain the information we uploaded in 4 tables in a AWS PostgreSQL database.
 
-<img src="https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/database_1.png" width=70%>
+<img src="https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/database_1.png" width=80%>
 
 Then, before starting our analyses and create our machine learning model, we downloaded each table and join them in a dataframe to be preprocessed.
 
-<img src="https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/database_2.png" width=70%>
-
-
-![Machine_Learning_model](Resources/Model.png "Machine Learning Model diagram")
+<img src="https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/database_2.png" width=90%>
 
 
 #### Description of the data exploration phase of the project
@@ -169,6 +166,10 @@ df['primarysourcecountry'].value_counts()
 ```
 
 #### Description of the analysis phase of the project
+
+##### Machine learning diagram
+
+<img src="https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/database_2.png" width=90%>
 
 After the preprocessing of our data, we decided on our features and targets for the machine learning portion of our project and were able to fit different ML models with our train data set and then test our models for performance and accuracy. 
 
