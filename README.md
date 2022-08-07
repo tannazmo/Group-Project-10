@@ -112,7 +112,7 @@ for prediction and visualization, we cleaned the JSON results from the API to 52
 * As a report can have several reactions ranging from 1 to 35, and some of them can only appear in a single report, we investigated 
 created a list of 10 reactions to keep based on the most common and severe reported reactions.
 
-<img src="https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/final_reactions.png" width=50%>
+<img src="https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/final_reactions.png" width=30%>
 
 * We make sure that some variables such as age and weight does not contain outliers
 
@@ -198,7 +198,7 @@ The results of some of the models we tried are here:
 
 #### Visualization 
 
-To answer the questions of our analyses rergarding statins, we used visual elements like charts, graphs, and maps we to find trends, outliers, and patterns in our dataset.
+To answer the questions of our analyses rergarding statins, we used visual elements like charts, graphs, and maps to find trends, outliers, and patterns in our dataset.
 
 ##### Statins and age
 
