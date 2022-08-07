@@ -25,7 +25,7 @@ We considered the following statins:
 
 * Around 1.9 millions emergency room visits in USA related to ADRs [reference](https://www.hcup-us.ahrq.gov/reports/statbriefs/sb109.pdf)
 
-* We wanted to work with a real-world dataset, and from this data set, we could ask and answer a question about an important question that could be anyone's question and concern, no matter where in the world they live or what in the world they do. 
+* We wanted to work with a real-world dataset, and using this data set, we could ask and answer questions about an important issue that could be anyone's concern.
 
 #### Description of the source of data 
 This is a dataset provided by the FDA based upon submissions by medical professionals about medications and their effect (adverse effect) on those who take them.
