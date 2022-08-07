@@ -78,12 +78,12 @@ route: [
 We were able to download 280,037 reports in 29 requests
 
 #### Questions the team hope to answer with the data
-* Questions we want to answer trough analysis and visualization with Tableau:
+* Questions we want to answer trough analysis and visualizations with Tableau:
 	* What are the most common and severe reactions of Statins
 	* Is there a difference in developping adverse reactions among genders
 	* What reactions are most associated with death and hospitalization
 	
-* Question we want to answer using a supervised machine learning classificaion method:
+* Question we want to answer using a supervised machine learning classificaion model:
 	* Likelihood of getting hospitalised or dying if experiencing some adverse reactions by looking at the age, gender, adverse reactions, drug indication.
 
 
