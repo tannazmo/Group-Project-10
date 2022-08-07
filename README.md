@@ -242,6 +242,8 @@ As rhabdomyolysis a more serious condition than myalgia, this could be a reason 
 
 ### Next steps
 
+##### Further Data Discovery and Deployment of ML Model
+
 * Obtaining the overall prescription data for statins would greatly increase the usefulness of our model. We could create models that predict hospitalization or death for any patient that has a statin prescribed to them.
 
 * Once deployed, a doctor or other medical practitioner could input the necessary patient data into the model to determine the risk of hospitalization or death due to an adverse reaction to a statin. 
