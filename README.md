@@ -198,7 +198,7 @@ The results of some of the models we tried are here:
 
 #### Visualization 
 
-To answer the questions of our analyses rergarding statins, we used visual elements like charts, graphs, and maps to find trends, outliers, and patterns in our dataset.
+To answer the questions of our project rergarding statins, we used visual elements like charts, graphs, and maps to find trends, outliers, and patterns in our dataset.
 
 ##### Statins and age
 
