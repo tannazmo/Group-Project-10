@@ -6,7 +6,7 @@ Adverse drug events (ADEs) are defined as injuries resulting from medication use
 Taking one the most prescribed class of drugs, statins, we used FDA adverse reporting data to analyze their potential adverse reactions and predict the most undesirable ones!
 
 
-### Content
+## Content
 
 #### Selected topic 
 The most prescribed drug class, Statins (Cholesterol lowering medications), leading to hospitatlization and death.
