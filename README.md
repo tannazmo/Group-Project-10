@@ -118,16 +118,16 @@ for prediction and visualization, we cleaned the JSON results from the API to 52
 * As a report can have several reactions ranging from 1 to 35, and some of them can only appear in a single report, we investigated 
 created a list of 10 reactions to keep based on the most common and severe reported reactions.
 
-![final_reactions]()
+![final_reactions](https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/final_reactions.png)
 
 * We make sure that some variables such as age and weight does not contain outliers
 
-![age_outliers]()
+![age_outliers](https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/age_outliers.png)
 
 
 After cleaning the dataset, we have left 28828 reports with 36 variables:
 
-![cleaned_df_columns]()
+![cleaned_df_columns](https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/df_final_cols.png)
 
 #### Database ERD
 ![ERD](ERD.png "ERD")
