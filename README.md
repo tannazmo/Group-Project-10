@@ -13,21 +13,69 @@ The most prescribed drug class, Statins (Cholesterol lowering medications), lead
 
 We considered the following statins:
 
-* Atorvastatin (Lipitor®)
-* Fluvastatin (Lescol. ®)
-* Pravastatin (Pravachol®)
-* Rosuvastatin (Crestor®)
-* Simvastatin (Zocor®)
+* [Atorvastatin (Lipitor®)](https://en.wikipedia.org/wiki/Atorvastatin)
+* [Fluvastatin (Lescol. ®)](https://en.wikipedia.org/wiki/Fluvastatin)
+* [Pravastatin (Pravachol®)](https://en.wikipedia.org/wiki/Pravastatin)
+* [Rosuvastatin (Crestor®)](https://en.wikipedia.org/wiki/Rosuvastatin)
+* [Simvastatin (Zocor®)](https://en.wikipedia.org/wiki/Simvastatin)
 
 
 #### Reason why this topic was selected 
-To be able to predict the incidences of hospitalisation or death based on an adverse effect dataset from FDA.
+* Annual cost of drug-related morbidity and mortality: ~ 170 billion dollars and rising [reference](https://www.sciencedirect.com/science/article/abs/pii/S1086580216312293?via%3Dihub)
 
-We wanted to work with a real-world dataset, and from this data set, we could ask and answer a question about an important question that could be anyone's question and concern, no matter where in the world they live or what in the world they do. 
+* Around 1.9 millions emergency room visits in USA related to ADRs [reference](https://www.hcup-us.ahrq.gov/reports/statbriefs/sb109.pdf)
+
+* We wanted to work with a real-world dataset, and from this data set, we could ask and answer a question about an important question that could be anyone's question and concern, no matter where in the world they live or what in the world they do. 
 
 #### Description of the source of data 
 This is a dataset provided by the FDA based upon submissions by medical professionals about medications and their effect (adverse effect) on those who take them.
 It is important to mention that our datasource is limited to the reported cases.
+
+The data collected by FDA is available through their API or CSV files. As the API data went through a harmonization process that removed duplicate records, we downloaded the reports from the API for our dataset.
+
+Example of API query used:
+
+[API URL](https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.generic_name:'atorvastatin'+patient.drug.openfda.brand_name:'atorvastatin'+patient.drug.medicinalproduct:'atorvastatin')+AND+_exists_:patient.drug.drugstructuredosageunit+AND+_exists_:patient.drug.drugstructuredosagenumb+AND+(primarysource.qualification:1+primarysource.qualification:2+primarysource.qualification:3))
+
+Anatomy of response in JSON format:
+```
+{
+safetyreportversion: "1",
+safetyreportid: "10004470",
+primarysourcecountry: "JP",
+occurcountry: "JP",
+transmissiondateformat: "102",
+transmissiondate: "20141002",
+reporttype: "1",
+serious: "1",
+seriousnessother: "1",
+patient: {
+patientonsetage: "77",
+patientonsetageunit: "801",
+patientsex: "2",
+reaction: [
+{
+reactionmeddraversionpt: "17.0",
+reactionmeddrapt: "Blood potassium decreased",
+reactionoutcome: "6"
+},
+],
+drug: [
+{
+….
+drugcharacterization: "1",
+medicinalproduct: "LIPITOR",
+drugauthorizationnumb: "020702",
+drugdosagetext: "10 MG TABLET",],
+generic_name: [
+"ATORVASTATIN CALCIUM"
+],
+route: [
+"ORAL"
+],
+}
+```
+
 
 #### Questions the team hope to answer with the data
 The question to answer is the likelihood of getting hospitalised or dying if experiencing any side effects by taking this medication. Using a supervised machine learning classificaion method, we want to be able to predict, -by looking at the age, gender, adverse reactions, drug indication- whether the patient will have serious reactions to Atorvastatin leading to  hospitalisation or not and whether they will have very serious reactions that may cause death or not. 
