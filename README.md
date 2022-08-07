@@ -93,9 +93,9 @@ Some additional cleaning was necessary to consolidate relevant data from the rep
 
 * Before preparing the data for prediction and visualization, we cleaned the JSON results from the API, removing 52 fields and their values as many contain non-essential information for our analyses. 
 
-* We drop all reports that do not have a statin as the suspected drugs of the reactions experienced.
+* We dropped all reports that do not have a statin as the suspected drugs of the reactions experienced.
 
-* We collected the information from some variables to create two new features considered essential for predicting death and hospitalization: 
+* We cused the information from some variables to create two new features considered essential for predicting death and hospitalization: 
 	* "nb_concomitant": the number of concomitant drugs the person was taking with the statin
 	* "nb_interacting": the number of interacting drugs the person was taking with the statin
 
@@ -107,8 +107,7 @@ Some additional cleaning was necessary to consolidate relevant data from the rep
 	* seriousnesslifethreatening
 	* seriousnesscongenitalanomali 
 
-* As a report can have several reactions ranging from 1 to 35, and some of them can only appear in a single report, we 
-created a list of 10 reactions to keep based on the most common and severe reported ones.
+* Since a report can contain several reactions ranging from 1 to 35, and some reactions can only occur in one report, we created a list of the ten most common and severe reactions to keep. 
 
 <img src="https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/final_reactions.png" width=50%>
 
