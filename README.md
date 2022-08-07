@@ -114,7 +114,7 @@ created a list of 10 reactions to keep based on the most common and severe repor
 
 <img src="https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/final_reactions.png" width=50%>
 
-* We make sure that some variables such as age and weight does not contain outliers
+* We make sure that some variables such as age and weight do not contain outliers
 
 <img src="https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/age_outliers.png" width=70%>
 
