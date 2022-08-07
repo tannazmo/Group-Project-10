@@ -205,13 +205,31 @@ To answer the questions of our project rergarding statins, we used visual elemen
 
 <img src="https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/statings_age.png" width=80%>
 
+* The age trend follows that of an older population.
+
+* Instances of adverse reactions and hospitalizations begin to become significant at around age 40 and peak at around age 70.
+
+* Instances of death peak at around age 75, which is in line with average life expectancy.
+
+
 ##### Statins and weight
 
 <img src="https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/statins_weight.png" width=80%>
 
+* The highest incidence of adverse reactions occurs in people weighing 80kg, the average weight of a North American. 
+
+* There are more instances above this weight than below, which suggests a higher instance of adverse reactions in those of above average weight.
+
+
 ##### Statins most common reactions
 
 <img src="https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/statins_reactions.png" width=80%>
+
+The most common ADR associated with Atorvastatin is Myalgia.
+
+The most common ADR associated with Simvastatin and Rosuvastatin is Rhabdomyolysis. 
+
+As rhabdomyolysis a more serious condition than myalgia, this could be a reason that Simvastatin and Rosuvastatin are prescribed less than Atorvastatin
 
 
 #### Technologies, languages, tools, and algorithms used throughout the project
