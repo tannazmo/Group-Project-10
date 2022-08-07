@@ -83,7 +83,7 @@ route: [
 	* Is there a difference in developping adverse reactions among genders
 	* What reactions are most associated with death and hospitalization
 	
-* Question we want to answer using Using a supervised machine learning classificaion method:
+* Question we want to answer using a supervised machine learning classificaion method:
 	* Likelihood of getting hospitalised or dying if experiencing some adverse reactions by looking at the age, gender, adverse reactions, drug indication.
 
 
