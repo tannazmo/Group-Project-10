@@ -99,7 +99,7 @@ Some additional cleaning was necessary to consolidate relevant data from the rep
 
 * We dropped all reports that do not have a statin as the suspected drugs of the reactions experienced.
 
-* We cused the information from some variables to create two new features considered essential for predicting death and hospitalization: 
+* We used the information from some variables to create two new features considered essential for predicting death and hospitalization: 
 	* "nb_concomitant": the number of concomitant drugs the person was taking with the statin
 	* "nb_interacting": the number of interacting drugs the person was taking with the statin
 
