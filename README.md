@@ -109,7 +109,7 @@ for prediction and visualization, we cleaned the JSON results from the API to re
 	* seriousnesslifethreatening
 	* seriousnesscongenitalanomali 
 
-* As a report can have several reactions ranging from 1 to 35, and some of them can only appear in a single report, we investigated 
+* As a report can have several reactions ranging from 1 to 35, and some of them can only appear in a single report, we 
 created a list of 10 reactions to keep based on the most common and severe reported reactions.
 
 <img src="https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/final_reactions.png" width=50%>
