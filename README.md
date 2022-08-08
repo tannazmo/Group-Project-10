@@ -113,21 +113,21 @@ Some additional cleaning was necessary to consolidate relevant data from the rep
 
 * Since a report can contain several reactions ranging from 1 to 35, and some reactions can only occur in one report, we created a list of the ten most common and severe reactions to keep. 
 
-<img src="https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/final_reactions.png" width=50%>
+<img src="Resources/images/final_reactions.png" width=50%>
 
 * We make sure that some variables such as age and weight do not contain outliers
 
-<img src="https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/age_outliers.png" width=70%>
+<img src="Resources/images/age_outliers.png" width=70%>
 
 
 After cleaning the dataset, we have left 29439 reports with 36 variables:
 
-<img src="https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/df_final_cols.png" width=50%>
+<img src="Resources/images/df_final_cols.png" width=50%>
 
 
 ### Data Pipeline
 
-![Data Pipeline](https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/data_pipeline.png)
+![Data Pipeline](Resources/images/data_pipeline.png)
 
 ### Database Implementation
 
@@ -317,7 +317,7 @@ The most common side effect associated with Atorvastatin is Myalgia. Interesting
 [Code](https://colab.research.google.com/drive/1OnK27kfFz05AUs3EIdkArZ_w93yHvBJA?usp=sharing "Code")
 
 ### Link to the Google Slide Presentation:
-[Presentation](https://docs.google.com/presentation/d/1gpLId618DzodGrncwFsHKa1xZkDsZFZXl6Yh6Q-xEaQ/edit#slide=id.p1 "Presentation Link")
+[Presentation](https://docs.google.com/presentation/d/1bK3ao6vfF4t49wK90f4OfuiG8FiLDsfocsHALQ5w8JE/edit?usp=sharing "Presentation Link")
 
 #### Project done by this team (alphabetically ordered):
 - Baldassarre, Nick
