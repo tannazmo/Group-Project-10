@@ -1,32 +1,149 @@
-# Analysis of adverse reaction of FDA Approved medicine class STATINS
+<img src="Resources/images/banner.png" width=100%>
 
 ## Presentation
 
-This project will be a supervised machine learning of Classification type. 
+Adverse drug events (ADEs) are defined as injuries resulting from medication use. Adverse reporting data have proven to be useful evidence in predicting adverse drug effects and flagging potential safety issues. 
+Taking one the most prescribed class of drugs, statins, we used FDA adverse reporting data to analyze their potential adverse reactions and predict the most undesirable ones!
+
+
+## Content
 
 ### Selected topic 
-Taking the most prescribed drug class, Statins (Cholesterol lowering medications), leading to hospitatlization and death.
+The most prescribed drug class, Statins (Cholesterol lowering medications), leading to hospitatlization and death.
 
+We considered the following statins:
+
+* [Atorvastatin (Lipitor®)](https://en.wikipedia.org/wiki/Atorvastatin)
+* [Fluvastatin (Lescol. ®)](https://en.wikipedia.org/wiki/Fluvastatin)
+* [Pravastatin (Pravachol®)](https://en.wikipedia.org/wiki/Pravastatin)
+* [Rosuvastatin (Crestor®)](https://en.wikipedia.org/wiki/Rosuvastatin)
+* [Simvastatin (Zocor®)](https://en.wikipedia.org/wiki/Simvastatin)
 
 ### Reason why this topic was selected 
-To be able to predict the incidences of hospitalisation or death based on an adverse effect dataset from FDA.
+* Annual cost of drug-related morbidity and mortality: ~ 170 billion dollars and rising [reference](https://www.sciencedirect.com/science/article/abs/pii/S1086580216312293?via%3Dihub)
 
-We wanted to work with a real-world dataset, and from this data set, we could ask and answer a question about an important question that could be anyone's question and concern, no matter where in the world they live or what in the world they do. 
+* Around 1.9 millions emergency room visits in USA related to ADRs [reference](https://www.hcup-us.ahrq.gov/reports/statbriefs/sb109.pdf)
+
+* We wanted to work with a real-world dataset, and using this data set, we could ask and answer questions about an important issue that could be anyone's concern.
+
 
 ### Description of the source of data 
-This is a dataset provided by the FDA based upon submissions by medical professionals about medications and their (adverse)effects on those who take them.
+This is a dataset provided by the FDA based upon submissions by medical professionals about medications and their reactions (adverse reactions) on those who take them.
 It is important to mention that our datasource is limited to the reported cases.
 
+The data collected by FDA is available through their API or CSV files. Using the API data, which has been streamlined to remove duplicate records, we created our dataset. 
+
+Example of API query used:
+
+```
+https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.generic_name:'atorvastatin'+patient.drug.openfda.brand_name:'atorvastatin'+patient.drug.medicinalproduct:'atorvastatin')+AND+_exists_:patient.drug.drugstructuredosageunit+AND+_exists_:patient.drug.drugstructuredosagenumb+AND+(primarysource.qualification:1+primarysource.qualification:2+primarysource.qualification:3
+```
+
+[API URL](https://api.fda.gov/drug/event.json?search=(patient.drug.openfda.generic_name:'atorvastatin'+patient.drug.openfda.brand_name:'atorvastatin'+patient.drug.medicinalproduct:'atorvastatin')+AND+_exists_:patient.drug.drugstructuredosageunit+AND+_exists_:patient.drug.drugstructuredosagenumb+AND+(primarysource.qualification:1+primarysource.qualification:2+primarysource.qualification:3))
+
+Anatomy of response in JSON format:
+```
+{
+safetyreportversion: "1",
+safetyreportid: "10004470",
+primarysourcecountry: "JP",
+occurcountry: "JP",
+transmissiondateformat: "102",
+transmissiondate: "20141002",
+reporttype: "1",
+serious: "1",
+seriousnessother: "1",
+patient: {
+patientonsetage: "77",
+patientonsetageunit: "801",
+patientsex: "2",
+reaction: [
+{
+reactionmeddraversionpt: "17.0",
+reactionmeddrapt: "Blood potassium decreased",
+reactionoutcome: "6"
+},
+],
+drug: [
+{
+….
+drugcharacterization: "1",
+medicinalproduct: "LIPITOR",
+drugauthorizationnumb: "020702",
+drugdosagetext: "10 MG TABLET",],
+generic_name: [
+"ATORVASTATIN CALCIUM"
+],
+route: [
+"ORAL"
+],
+}
+```
+
+
 ### Questions the team hope to answer with the data
-The question to answer is the likelihood of getting hospitalised or dying if experiencing any adverse effects by taking this medication. Using a supervised machine learning classificaion method, we want to be able to predict, -by looking at the age, gender, adverse reactions, drug indication- whether the patient will have serious reactions to any of statins, leading to  hospitalisation or not and whether they will have very serious reactions that may cause death or not. 
+* Questions we want to answer trough analysis and visualizations with Tableau:
+	* What are the most common and severe reactions of Statins
+	* Is there a difference in developping adverse reactions among genders
+	* What reactions are most associated with death and hospitalization
+	
+* Question we want to answer using a supervised machine learning classificaion model:
+	* Likelihood of getting hospitalised or dying if experiencing some adverse reactions by looking at the age, gender, adverse reactions, drug indication.
+
+### Downloading and cleaning the data from OpenFDA
+For all the statins considered: Atorvastatin, Fluvastatin, Simvastatin, Pravastatin, and Rosuvastatin, we were able to download 280,037 records in 29 requests.
+
+Some additional cleaning was necessary to consolidate relevant data from the reports we obtained. Therefore, we went through the following steps to clean the data:
+
+* Before preparing the data for prediction and visualization, we cleaned the JSON results from the API, removing 52 fields and their values as many contain non-essential information for our analyses. 
+
+* We dropped all reports that do not have a statin as the suspected drugs of the reactions experienced.
+
+* We used the information from some variables to create two new features considered essential for predicting death and hospitalization: 
+	* "nb_concomitant": the number of concomitant drugs the person was taking with the statin
+	* "nb_interacting": the number of interacting drugs the person was taking with the statin
+
+* We replaced NAN values in columns where the default value should be 0 according to openFDA indication: 
+	* serious, 
+	* seriousnessother
+	* seriousnessdisabling
+	* seriousnessdeath 
+	* seriousnesslifethreatening
+	* seriousnesscongenitalanomali 
+
+* Since a report can contain several reactions ranging from 1 to 35, and some reactions can only occur in one report, we created a list of the ten most common and severe reactions to keep. 
+
+<img src="https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/final_reactions.png" width=50%>
+
+* We make sure that some variables such as age and weight do not contain outliers
+
+<img src="https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/age_outliers.png" width=70%>
 
 
-### Database Mock Up (Preferably a ERD - Entity Relationship Diagram)
-![ERD](ERD.png "ERD")
+After cleaning the dataset, we have left 29439 reports with 36 variables:
 
-### Diagram of Data Pipeline (ETL, Database, and Machine Learning model)
-![Data Pipeline](data_pipeline.png "Data Pipeline")
-![Machine_Learning_model](Resources/Model.png "Machine Learning Model diagram")
+<img src="https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/df_final_cols.png" width=50%>
+
+
+### Data Pipeline
+
+![Data Pipeline](https://github.com/tannazmo/Group-Project-10/blob/segment3_IVL/Resources/images/data_pipeline.png)
+
+### Database Implementation
+
+#### ERD Diagram
+
+<img src="Resources/images/db_erd.png" width=60%>
+
+With the cleaned dataset, we created 4 dataframes: report, patient, reactions and drugs that contain the information we uploaded in 4 tables in a AWS PostgreSQL database.
+
+<img src="Resources/images/database_1.png" width=100%>
+
+Then, before starting our analyses and creating our machine learning model, we downloaded each table and join them in a dataframe to be preprocessed.
+
+<img src="Resources/images/database_2.png" width=100%>
+
+
 
 ### Description of the data exploration phase of the project
 
@@ -75,6 +192,10 @@ for i in covid_related_indications:
 
 ### Description of the analysis phase of the project
 
+#### Machine learning diagram
+
+<img src="Resources/images/ML_model.png" width=90%>
+
 After the preprocessing of our data, we decided on our features and targets for the machine learning portion of our project, and then were able to fit different ML models with our train data set and then test our models for performance and accuracy. 
 
 This task was split between all the team members and each of us worked on different ML models, comprising of the less complex models such as Logistic Regression model and more complex ones such as Neural Network's deep learning models.
@@ -102,33 +223,48 @@ And their results:
 ![Neural_Network](Resources/images/nn.png "Neural Network")
 
 
+### Visualization 
+
+To answer the questions of our project rergarding statins, we used visual elements like charts, graphs, and maps to find trends, outliers, and patterns in our dataset.
+
+#### Statins and age
+
+<img src="Resources/images/statings_age.png" width=80%>
+
+* The age trend follows that of an older population.
+
+* Instances of adverse reactions and hospitalizations begin to become significant at around age 40 and peak at around age 70.
+
+* Instances of death peak at around age 75, which is in line with average life expectancy.
+
+
+#### Statins and weight
+
+<img src="Resources/images/statins_weight.png" width=80%>
+
+* The highest incidence of adverse reactions occurs in people weighing 80kg, the average weight of a North American. 
+
+* There are more instances above this weight than below, which suggests a higher instance of adverse reactions in those of above average weight.
+
+
+#### Statins most common reactions
+
+<img src="Resources/images/statins_reactions.png" width=80%>
+
+* The most common ADR associated with Atorvastatin is Myalgia.
+
+* The most common ADR associated with Simvastatin and Rosuvastatin is Rhabdomyolysis. 
+
+* As rhabdomyolysis a more serious condition than myalgia, this could be a reason that Simvastatin and Rosuvastatin are prescribed less than Atorvastatin
+
 
 ### Technologies, languages, tools, and algorithms used throughout the project
-* Data in the format of JSON retrieved from FDA Website using API, then converted to CSV, then stored to Amazon S3
-* Python files to run on Google Colab will be using Pandas and PySpark libraries.
-* The cleaned data will be loaded in a PostgreSQL on AWS.
-* Data will be processed with a superised machine learning model potentially Neural Networks.
+* Data in JSON format retrieved from FDA API, then converted to CSV, then stored to Amazon S3
+* Python files to run on Google Colab using Pandas and PySpark libraries.
+* The cleaned data was loaded in a PostgreSQL database on AWS.
+* The cleaned data was processed and used for prediction applying a superised machine learning model from scikit-learn python library.
 * Presentation Slides on Google Slides.
 * For visualisation, we have used Tableau public and have stories and interactive dashboards.
-
-
-### Visualization Blueprint
-This is a visualization about statins in general:
-
-![Number_of_Records](Resources/images/Total%20number%20of%20records.png "Number of Records")
-
-![Death_Gender](Resources/images/Drug%20death%20risk%20based%20on%20Gender.png "Death Risk by Gender")
-
-![Age](Resources/images/Age.png "Adverse Reaction by Age")
-
-![Geographical_Death](Resources/images/Country%20with%20the%20highest%20death_Medicine.png "Geographical Death")
-
-### Database Connection
-
-![Creating_Database](Resources/database_1.png "Creating Database")
-
-![Tables_Database](Resources/database_2.png "Tables of the Database")
-
 
 ### Result of analysis
 We came up with a couple of interpretations of the analysis:
@@ -157,10 +293,24 @@ The five medicinal products showed some key differences, mainly the prevalence o
 
 The most common side effect associated with Atorvastatin is Myalgia. Interestingly, the most common side effect associated with Simvastatin and Rosuvastatin is Rhabdomyolysis. As this is generally a more serious condition than myalgia, this could be a reason that Simvastatin and Rosuvastatin are prescribed less than Atorvastatin.
 
+### Next steps
+---
+
+### Deployment of ML Model
+
+* Create a website (eg. Flask) that allows user inputs that can be run against a trained model. 
+
+* Once deployed, a doctor or other medical practitioner could input the necessary patient data into the model to determine the risk of hospitalization or death due to an adverse reaction to a statin. 
+
+* This could help to inform the decision making process when prescribing statins and could potentially reduce instances of negative outcomes from adverse reactions.
+
 ### Recommendation for future analysis
-We recommend working with a bigger dataset and including other medicinal products 
+* Obtaining the overall prescription data for statins would greatly increase the usefulness of our model. We could create models that predict hospitalization or death for any patient that has a statin prescribed to them.
+
+* Finding patterns between the features on a bigger dataset.
 
 ### Anything the team would have done differently
+* We could have created a new feature using the enddate and startdate columns that gave us the duration the drug was taken.
 
 
 ### Link to our code:
