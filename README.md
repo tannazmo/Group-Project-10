@@ -53,6 +53,28 @@ for c in ctydict:
 df['primarysourcecountry'].value_counts()
 ```
 
+Example of filling missing values (in this case patient's weight) using Iterative Imputing:
+
+```
+weight_imputer = IterativeImputer(random_state=42)
+df['patient_patientweight'] = weight_imputer.fit_transform(df[['patient_patientweight']])
+```
+
+Example of filling missing values
+```
+# Fill missing values from seriousnesscongenitalanomali with 0 since if someone does not have congenital anomali, the value is supposed to be 0
+df['seriousnesscongenitalanomali'].fillna(0,inplace=True)
+```
+
+Example of grouping values to decrease the number of categorical data (in this case drug indications)
+```
+covid_related_indications = ['COVID-19 PNEUMONIA','COVID-19 immunisation','COVID','COVID-19']
+for i in covid_related_indications:
+  df['patient_drug_drugindication'] = df['patient_drug_drugindication'].apply(
+    lambda row : "COVID" if str(row) == i else row
+    )
+```
+
 #### Description of the analysis phase of the project
 
 After the preprocessing of our data, we decided on our features and targets for the machine learning portion of our project and were able to fit different ML models with our train data set and then test our models for performance and accuracy. 
@@ -89,6 +111,7 @@ The results of some of the models we tried are here:
 * Presentation Slides on Google Slides.
 * For visualisation, we will have an interactive Tableau dashboard.
 
+
 #### Visualization Blueprint
 This is a visualization about statins in general:
 
@@ -112,3 +135,43 @@ This is a visualization about statins in general:
 
 ### Link to the Google Slide Presentation:
 [Presentation](https://docs.google.com/presentation/d/1gpLId618DzodGrncwFsHKa1xZkDsZFZXl6Yh6Q-xEaQ/edit#slide=id.p1 "Presentation Link")
+
+#### Result of analysis
+We came up with a couple of interpretations of the analysis:
+
+***- Gender Differences***
+
+Overall, there were more reports of men having adverse reactions than women. This could mean more men being prescribed statins, or men being more susceptible to adverse reactions from the use of statins. Most likely it is a combination of both. We could further explore this by obtaining overall usage statistics of statins over the same time period.
+
+Women experiencing adverse effects from statins had a slightly higher rate of hospitalization than men, with men having a 44.9% chance of being hospitalized compared to 45.5% of women. 
+	
+Men had a significantly higher instance of death than women. Women who experienced adverse reactions from statins had a 5.0% chance of death, whereas men had a death rate of 7.6%.
+
+
+***- Age and Weight Differences***
+
+The age trend seems to follow that of an older population. Instances of adverse reactions and hospitalizations begin to become significant at around age 40 and peak at around age 70. Instances of death peak at around age 75, which is in line with average life expectancy.
+
+Weight trends seem to follow that of an adult population. The highest incidence of adverse effects occurs in people weighing 80kg, which is the average weight of a North American. There are more instances above this weight than below, which suggests a higher instance of adverse reactions in those of above average weight.
+	
+What we can interpret from this is that statins are mainly prescribed to people above the age of 40, and that instances of side effects increase as people approach the age of 70. We can also interpret that while weight will not necessarily determine whether someone will have an adverse reaction, weighing 80kg or more will increase the likelihood of these reactions.
+
+
+***- Differences between Medicinal Products***
+
+The 5 medicinal products showed some key differences, mainly the prevalence of the use of Atorvastatin. More than half of all reported adverse effects occurred in patients taking Atorvastatin. Simvastatin and Rosuvastatin have the second and third most instances of adverse reactions respectively, making up the majority of the remainder of reports.
+
+The most common side effect associated with Atorvastatin is Myalgia. Interestingly, the most common side effect associated with Simvastatin and Rosuvastatin is Rhabdomyolysis. As this is generally a more serious condition than myalgia, this could be a reason that Simvastatin and Rosuvastatin are prescribed less than Atorvastatin.
+
+#### Recommendation for future analysis
+We recommend working with a bigger dataset and including other medicinal products 
+
+#### Anything the team would have done differently
+
+
+
+#### Prject done by this team (alphabetically ordered):
+- Baldassarre, Nick
+- Farahani, Tina 
+- Leonard, Valerie
+- Mostaghimi, Tannaz
