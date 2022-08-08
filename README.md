@@ -14,11 +14,11 @@ To be able to predict the incidences of hospitalisation or death based on an adv
 We wanted to work with a real-world dataset, and from this data set, we could ask and answer a question about an important question that could be anyone's question and concern, no matter where in the world they live or what in the world they do. 
 
 ### Description of the source of data 
-This is a dataset provided by the FDA based upon submissions by medical professionals about medications and their effect (adverse effect) on those who take them.
+This is a dataset provided by the FDA based upon submissions by medical professionals about medications and their (adverse)effects on those who take them.
 It is important to mention that our datasource is limited to the reported cases.
 
 ### Questions the team hope to answer with the data
-The question to answer is the likelihood of getting hospitalised or dying if experiencing any side effects by taking this medication. Using a supervised machine learning classificaion method, we want to be able to predict, -by looking at the age, gender, adverse reactions, drug indication- whether the patient will have serious reactions to Atorvastatin leading to  hospitalisation or not and whether they will have very serious reactions that may cause death or not. 
+The question to answer is the likelihood of getting hospitalised or dying if experiencing any adverse effects by taking this medication. Using a supervised machine learning classificaion method, we want to be able to predict, -by looking at the age, gender, adverse reactions, drug indication- whether the patient will have serious reactions to any of statins, leading to  hospitalisation or not and whether they will have very serious reactions that may cause death or not. 
 
 
 ### Database Mock Up (Preferably a ERD - Entity Relationship Diagram)
@@ -96,7 +96,7 @@ And their results:
 ![Random_Forest_Balanced](Resources/images/rfb.png "Random Forest Balanced Subsample")
 
 
-![Support_Vector](Resources/images/svm.png "Support Vector Model")
+![Support_Vector](Resources/images/svm.png "Support Vector Machines")
 
 
 ![Neural_Network](Resources/images/nn.png "Neural Network")
@@ -109,7 +109,7 @@ And their results:
 * The cleaned data will be loaded in a PostgreSQL on AWS.
 * Data will be processed with a superised machine learning model potentially Neural Networks.
 * Presentation Slides on Google Slides.
-* For visualisation, we will have an interactive Tableau dashboard.
+* For visualisation, we have used Tableau public and have stories and interactive dashboards.
 
 
 ### Visualization Blueprint
