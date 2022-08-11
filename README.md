@@ -120,9 +120,14 @@ Some additional cleaning was necessary to consolidate relevant data from the rep
 <img src="Resources/images/age_outliers.png" width=70%>
 
 
-After cleaning the dataset, we have left 29439 reports with 36 variables:
+After cleaning the dataset, we were left with 29439 reports with 36 variables:
 
 <img src="Resources/images/df_final_cols.png" width=50%>
+
+
+After preprocessing the dataset, we were left with 27429 reports with 62 variables:
+
+<img src="Resources/images/df_final_pp_cols.png" width=50%>
 
 
 ### Data Pipeline
