@@ -323,7 +323,7 @@ The most common side effect associated with Atorvastatin is Myalgia. Interesting
 [Dashboard](https://public.tableau.com/views/Group10Project_16598908439690/HomePage?:language=en-US&:display_count=n&:origin=viz_share_link "Dashboard Link")
 
 #### Project done by this team (alphabetically ordered):
-- Baldassarre, Nick
-- Farahani, Tina 
-- Leonard, Valerie
-- Mostaghimi, Tannaz
+- Baldassarre, Nick - [GitHub](https://github.com/NickBaldassarre "GitHub")
+- Farahani, Tina - [GitHub](https://github.com/Tifarahani "GitHub") 
+- Leonard, Valerie - [GitHub](https://github.com/valerielnd "GitHub")
+- Mostaghimi, Tannaz - [GitHub](https://github.com/tannazmo "GitHub")
